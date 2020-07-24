@@ -1,31 +1,36 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
-class He extends React.Component {
-  render() {
-    return (
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-        {this.props.til} {this.props.ti} {this.props.num}
-      </p>
-    );
-  }
-}
+import Header from "./components/header";
+import { Body } from "./components/body";
 
 function App() {
+  const add = (a, b) => a + b;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <He til="hshsh" ti={"sss"} num={11} />
+        <Header
+          hhh
+          til="hshsh"
+          ti={"sss"}
+          num={11}
+          myarr={[1, 2, 23]}
+          myfun={add}
+          ofun={(a, b) => a + b}
+          myobj={{
+            a: 5,
+            b: 2,
+          }}
+        />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="file:///C:/Users/Jimmy/Downloads/Resume 7 4 2020 P .pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
+          <Body />
         </a>
       </header>
     </div>
